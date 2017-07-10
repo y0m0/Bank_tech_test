@@ -54,4 +54,6 @@ As a user
 So that I can have better control over my funds
 I want list my transaction with dates
 ```
+## Domain Model
 
+![Alt text](Bank-tech-test.jpg?raw=true)
