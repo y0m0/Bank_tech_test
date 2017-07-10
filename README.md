@@ -21,6 +21,12 @@ $ brew install node
 
 ## Usage
 
+Start Node.js
+```
+$ node
+
+>
+```
 
 ## User Stories
 ```
