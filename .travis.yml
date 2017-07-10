@@ -1,9 +1,16 @@
 language: node_js
 node_js:
-    - "node"
+- node
 before_script:
-    - "npm install -g jasmine"
-    - "npm install"
-
+- npm install -g jasmine
+- npm install
+script:
+- npm test
+after_success:
+- codeclimate < ./coverage/lcov.info
+addons:
+  code_climate:
+  repo_token:
+    secure: lt4kDkUIcLh+tY8VU6UrzK9MvnrQDiMc9wAW6qorcUaVMANhWozPR1UeqqDNnnvrLINiHCAM4GQUraxR5JGA6GCKGrvBI7DmFswklUzpF7jNQbGhwOLqgWacyVgJGIhOrJyTHfhycPegD3WXtGS1A4IrbPk1LEO4QJ2YWGRDfZQckHjwaC355j1LOdMGQuA1rexcvWAJdf3IuQPsStfCCCvCXDAzMA5hBf4gYy6YJOIfFPLgCLWOrhjcPR1ptUcBJ/v1kLuFJ9h7DdQ+kDGsgWCJ5gxmUQBwxEYsKjVnkSQNotQo6Apiy+7NZ8gpW6cQn/5jQiX58ZImRrEyNqKEVQSmk8fdJn1KX67UxubMVJ4xiAqLGT1AuZ64I/CpG7D66VlC54Cyr75h7KuQLNQRS5ZDpjCrFG349wCZ8Ol337tZqpztCyFFJFTqC6TQP+bhkZvFLR9kwnt8aQCumQ4lr0KYj7zPYTsy+Dvls+XkIibljNjM7cl+cSNVCW7FWT8IMjZww8ObP4PhIo2bDgFsnPZiTZ94+Vrg4Wi4VWPfPhFr3zJmdiXU5IE4FupZudbKHWJmDlC56aIMe5iKeulUwgLxAlLnHp1L3zjudAdwElISXmEn8jLasI6+nmpoSupM9F++tBdVFUq2jRpZiEsQPpY1SxXmZvYSRkKbczMI8ys=
 notifications:
   email: false
