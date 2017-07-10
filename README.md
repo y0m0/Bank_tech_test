@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/y0m0/Bank_tech_test.svg?branch=master)](https://travis-ci.org/y0m0/Bank_tech_test)
+
 ## Bank tech test
 
 Simple JavaScript software to manage a bank deposit account
