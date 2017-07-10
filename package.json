@@ -4,7 +4,7 @@
   "description": "Simple JavaScript software to manage a bank deposit account",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine" 
+    "test": "istanbul cover --include-all-sources ./node_modules/.bin/jasmine"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/y0m0/Bank_tech_test#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "jasmine": "^2.6.0"
   }
 }
