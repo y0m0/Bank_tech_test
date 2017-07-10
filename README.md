@@ -6,7 +6,7 @@ Simple JavaScript software to manage a bank deposit account
 
 Simply clone this repo on your machine:
 ```
-git clone ....
+git clone https://github.com/y0m0/Bank_tech_test.git
 ```
 Make sure you have Node.js installed on your machine:
 ```
