@@ -37,5 +37,9 @@ describe('Account', () => {
       account.withdraw(10);
       expect(account.balance).toBeLessThan(20.0);
     });
+
+    it('throws an error if balance is insufficient', () => {
+      expect(() => { account.withdraw(21) }).toThrowError('insufficient balance.')
+    })
   });
 });
