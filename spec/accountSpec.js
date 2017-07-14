@@ -51,9 +51,15 @@ describe('Account', () => {
       expect(account.statement()).toEqual(header + "balance: 10");
     });
 
-    it("return a transaction", () => {
+    it("return a deposit", () => {
       account.deposit(10);
       expect(account.statement()).toEqual(header + "deposit: 10\nbalance: 10")
+    });
+
+    it("return a withdraw", () => {
+      account.balance = 20;
+      account.withdraw(10);
+      expect(account.statement()).toEqual(header + "withdraw: 10\nbalance: 10")
     });
 
     it("returns multiple transactions", () => {
