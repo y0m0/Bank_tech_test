@@ -44,20 +44,27 @@ describe('Account', () => {
   });
 
   describe("#statement", () => {
+    var header = "date || credit || debit || balance\n"
+
     it("returns the current balance", () => {
       account.balance = 10;
-      expect(account.statement()).toEqual("balance: 10");
+      expect(account.statement()).toEqual(header + "balance: 10");
     });
 
     it("return a transaction", () => {
       account.deposit(10);
-      expect(account.statement()).toEqual("deposit: 10, balance: 10")
+      expect(account.statement()).toEqual(header + "deposit: 10\nbalance: 10")
     });
 
     it("returns multiple transactions", () => {
       account.deposit(20);
       account.withdraw(5);
-      expect(account.statement()).toEqual("deposit: 20, withdraw: 5, balance: 15")
-    })
+      expect(account.statement()).toEqual(header + "deposit: 20\nwithdraw: 5\nbalance: 15")
+    });
+
+    it("has a header", () => {
+      expect(account.statement()).toEqual("date || credit || debit || balance\nbalance: 0")
+    });
   });
 });
+
